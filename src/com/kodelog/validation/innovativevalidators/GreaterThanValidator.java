@@ -27,6 +27,6 @@ public class GreaterThanValidator<K extends Comparable<K>, V extends Comparable<
 			throw new IllegalStateException((new StringBuilder(param.toString()).append(" is not greater than ")
 					.append(value.toString()).toString()));
 		}
-		return null;
+		return true;
 	}
 }
