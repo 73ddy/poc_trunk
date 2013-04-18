@@ -4,12 +4,12 @@ import com.kodelog.validation.validators.Validator;
 
 /**
  * Some innovative validators can make your day
+ *
+ * @param <K> Object extending Comaprable
+ * @param <V> Object extending Comaprable
+ * @param <R> Result Object
  * 
  * @author 73ddy
- *
- * @param <K>
- * @param <V>
- * @param <R>
  */
 public class GreaterThanValidator<K extends Comparable<K>, V extends Comparable<K>, R> implements
 		Validator<K, K, Boolean> {
@@ -27,6 +27,6 @@ public class GreaterThanValidator<K extends Comparable<K>, V extends Comparable<
 			throw new IllegalStateException((new StringBuilder(param.toString()).append(" is not greater than ")
 					.append(value.toString()).toString()));
 		}
-		return null;
+		return true;
 	}
 }
